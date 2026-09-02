@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xinyue Zhao</title>
+<meta name="description" content="Xinyue Zhao is a PhD candidate in Finance at the Georgia Institute of Technology, studying household finance, financial distress, and AI in economics.">
+<meta name="author" content="Xinyue Zhao">
+<meta property="og:title" content="Xinyue Zhao">
+<meta property="og:description" content="PhD candidate in Finance, Georgia Institute of Technology.">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<style>
+  :root{
+    --bg:#fdfdfc; --panel:#ffffff; --ink:#1c1c1a; --muted:#5f5f58;
+    --faint:#8d8d84; --rule:#e4e2dc; --accent:#8a5a2b; --accent-soft:#f3ede4;
+    --max:44rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16150f; --panel:#1d1c15; --ink:#eceae2; --muted:#b3b0a4;
+           --faint:#8b887c; --rule:#33312a; --accent:#d3a26a; --accent-soft:#2a261c; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:400 16.5px/1.65 "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    padding:clamp(1.75rem,5vw,4.5rem) 1.25rem 5rem;
+  }
+  .wrap{max-width:var(--max); margin:0 auto}
+  a{color:var(--accent); text-underline-offset:2px; text-decoration-thickness:.06em}
+  a:hover{text-decoration-thickness:.12em}
+
+  /* ---- header ---- */
+  header{display:flex; gap:1.6rem; align-items:flex-start; flex-wrap:wrap}
+  #photo{
+    width:118px; height:150px; object-fit:cover; border-radius:3px;
+    border:1px solid var(--rule); flex:0 0 auto;
+  }
+  .id{flex:1 1 17rem; min-width:15rem}
+  h1{
+    font-size:clamp(1.85rem,5.5vw,2.4rem); line-height:1.15;
+    margin:0 0 .35rem; letter-spacing:-.015em; font-weight:600;
+  }
+  .zh{font-size:.62em; color:var(--faint); font-weight:400; margin-left:.45em; letter-spacing:.02em}
+  .role{margin:0; color:var(--muted); font-size:1.02rem}
+  .role strong{color:var(--ink); font-weight:600}
+
+  .links{margin:.95rem 0 0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:.45rem}
+  .links a{
+    display:inline-block; text-decoration:none; color:var(--muted);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    font-size:.8rem; letter-spacing:.02em;
+    border:1px solid var(--rule); border-radius:999px; padding:.24rem .72rem;
+    background:var(--panel); transition:.15s;
+  }
+  .links a:hover{border-color:var(--accent); color:var(--accent); background:var(--accent-soft)}
+
+  /* ---- sections ---- */
+  section{margin-top:2.9rem}
+  h2{
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    font-size:.74rem; font-weight:600; text-transform:uppercase; letter-spacing:.14em;
+    color:var(--faint); margin:0 0 1.1rem; padding-bottom:.5rem;
+    border-bottom:1px solid var(--rule);
+  }
+  p{margin:0 0 1rem}
+  .lede{color:var(--muted)}
+  .lede em{color:var(--ink); font-style:normal; font-weight:600}
+
+  /* ---- papers ---- */
+  .paper{margin:0 0 1.9rem; padding-left:1rem; border-left:2px solid var(--rule)}
+  .paper:last-child{margin-bottom:0}
+  .paper h3{margin:0 0 .3rem; font-size:1.06rem; font-weight:600; line-height:1.35}
+  .authors{margin:0 0 .55rem; font-size:.93rem; color:var(--muted)}
+  .authors .me{color:var(--ink); font-weight:600}
+  .summary{margin:0; font-size:.95rem; color:var(--muted)}
+  .meta{
+    margin:.65rem 0 0; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    font-size:.78rem; color:var(--faint); line-height:1.6;
+  }
+  .meta b{color:var(--muted); font-weight:600}
+  .tag{
+    display:inline-block; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    font-size:.68rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--accent); background:var(--accent-soft);
+    border-radius:3px; padding:.12rem .45rem; margin-bottom:.5rem;
+  }
+  .paper .out{margin:.6rem 0 0; display:flex; gap:.4rem; flex-wrap:wrap}
+  .paper .out a{
+    text-decoration:none; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    font-size:.76rem; border:1px solid var(--rule); border-radius:4px;
+    padding:.18rem .55rem; color:var(--muted); background:var(--panel);
+  }
+  .paper .out a:hover{border-color:var(--accent); color:var(--accent)}
+  .avail{
+    margin:.6rem 0 0; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    font-size:.76rem; color:var(--faint); font-style:italic;
+  }
+
+  /* ---- simple rows ---- */
+  .row{display:flex; gap:1.1rem; margin:0 0 .85rem; align-items:baseline}
+  .row:last-child{margin-bottom:0}
+  .when{
+    flex:0 0 5.5rem; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    font-size:.8rem; color:var(--faint); text-align:right;
+  }
+  .what{flex:1 1 auto}
+  .what .sub{display:block; font-size:.9rem; color:var(--muted)}
+  @media (max-width:520px){
+    .row{display:block}
+    .when{text-align:left; margin-bottom:.1rem}
+  }
+
+  footer{
+    margin-top:3.5rem; padding-top:1.1rem; border-top:1px solid var(--rule);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    font-size:.78rem; color:var(--faint);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img id="photo" src="assets/photo.jpg" alt="Xinyue Zhao"
+         onerror="this.remove()">
+    <div class="id">
+      <h1>Xinyue Zhao<span class="zh">赵欣悦</span></h1>
+      <p class="role">PhD Candidate in Finance<br>
+        <strong>Scheller College of Business</strong>, Georgia Institute of Technology</p>
+      <ul class="links">
+        <li><a href="mailto:xzhao470@gatech.edu">Email</a></li>
+        <li><a href="assets/Xinyue_Zhao_CV.pdf">CV</a></li>
+        <li><a href="https://www.linkedin.com/in/xinyuezhao7" rel="me">LinkedIn</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p class="lede">I am a PhD candidate in Finance at the Georgia Institute of Technology. My research studies
+      <em>how financial distress propagates to households and firms</em>, with particular attention to credit
+      access and lender intervention, and <em>how AI agents and machine learning can open new empirical
+      questions in economics and finance</em>.</p>
+    <p class="lede">Before Georgia Tech I earned an MSc in Financial Analysis from London Business School and
+      dual bachelor's degrees in Economics and Arabic from Peking University.</p>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <article class="paper">
+      <span class="tag">EMNLP 2026 Main</span>
+      <h3>Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM Nowcasts on Macroeconomic Indicators</h3>
+      <p class="authors"><span class="me">Xinyue Zhao</span>, Ruiyi Zhang, Liqin Ye, Rui Cao, Pengtao Xie, Sudheer Chava</p>
+      <p class="summary">We introduce LiveMacroEval, a live, contamination-resistant benchmark for evaluating
+        whether web-enabled LLM agents can nowcast 16 major U.S. macroeconomic indicators before their official
+        release. Using hourly predictions collected over six months, we compare LLM agents with Federal Reserve
+        nowcasts, the Bloomberg professional consensus, and a statistical baseline. LLM agents perform broadly
+        comparably to institutional and professional forecasts.</p>
+      <p class="out">
+        <a href="https://arxiv.org/abs/2608.30110">arXiv</a>
+        <a href="https://livemacroeval.github.io/">Live benchmark</a>
+      </p>
+    </article>
+  </section>
+
+  <section id="working-papers">
+    <h2>Working Papers</h2>
+
+    <article class="paper">
+      <h3>Retailer Bankruptcy and Its Spillover to Consumer Credit</h3>
+      <p class="authors">with Sudheer Chava, Rohan Ganduri, and Yafei Zhang</p>
+      <p class="summary">Using U.S. credit bureau data, we show that retailer bankruptcies lead to widespread
+        retail credit card closures, sharply reducing consumers' credit limits. Credit-constrained households
+        cannot replace this lost credit and face larger, persistent declines in borrowing capacity, resulting in
+        lower credit card borrowing. This reveals a new retail credit card channel through which retailer
+        bankruptcies impose lasting negative externalities on households.</p>
+      <p class="meta"><b>Presented / scheduled:</b> American Finance Association Annual Meeting 2027 &middot;
+        Northern Finance Association Annual Meeting 2026 &middot; Boulder Summer Conference (poster) 2026 &middot;
+        Georgia Tech &ndash; Atlanta Fed Household Finance Conference 2026</p>
+      <p class="avail">Draft available on request.</p>
+    </article>
+
+    <article class="paper">
+      <h3>The &ldquo;Myth&rdquo; of Covenant Violation Waiver</h3>
+      <p class="authors">with Sudheer Chava and Shunlan Fang</p>
+      <p class="summary">Using a fine-tuned RoBERTa model to identify covenant violations and waivers in
+        corporate filings, we show that waivers are granted in 67% of violations, with 22% involving material
+        terms. Relative to comparable violators without waivers, waived firms deleverage but face larger
+        increases in interest expenses, deeper investment cuts, and higher bankruptcy risk. These patterns are
+        consistent with creditor rent extraction rather than waivers serving as pure borrower relief.</p>
+      <p class="meta"><b>Presented / scheduled:</b> AI and the Future of Finance Conference 2026 (poster) &middot;
+        Georgia Tech 2025</p>
+      <p class="avail">Draft available on request.</p>
+    </article>
+  </section>
+
+  <section id="wip">
+    <h2>Work in Progress</h2>
+    <article class="paper">
+      <p class="summary">Fintech securitization under the Term Asset-Backed Securities Loan Facility (TALF)
+        and its effects on borrowers.</p>
+    </article>
+    <article class="paper">
+      <p class="summary">How monetary policy transmits to marginal households that rely on alternative
+        finance.</p>
+    </article>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <div class="row">
+      <div class="when">Georgia Tech</div>
+      <div class="what"><strong>MGT 4066: Corporate Restructuring</strong>
+        <span class="sub">Average teaching evaluation 4.6 / 5.0</span></div>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>Education, Awards &amp; Service</h2>
+    <div class="row">
+      <div class="when">2023 &ndash;</div>
+      <div class="what"><strong>Georgia Institute of Technology</strong>
+        <span class="sub">PhD in Finance</span></div>
+    </div>
+    <div class="row">
+      <div class="when">2021 &ndash; 2023</div>
+      <div class="what"><strong>London Business School</strong>
+        <span class="sub">MSc in Financial Analysis</span></div>
+    </div>
+    <div class="row">
+      <div class="when">2017 &ndash; 2021</div>
+      <div class="what"><strong>Peking University</strong>
+        <span class="sub">BE in Economics, BA in Arabic (dual degree)</span></div>
+    </div>
+    <div class="row">
+      <div class="when">2026</div>
+      <div class="what"><strong>Herbert P. Haley Fellowship</strong>
+        <span class="sub">Georgia Institute of Technology</span></div>
+    </div>
+    <div class="row">
+      <div class="when">Service</div>
+      <div class="what"><strong>Ad hoc reviewer</strong>
+        <span class="sub">Journal of Banking and Finance</span></div>
+    </div>
+    <div class="row">
+      <div class="when">2022</div>
+      <div class="what"><strong>BlackRock, Inc.</strong> &mdash; Hong Kong SAR
+        <span class="sub">Portfolio Analytics Group, Summer Analyst</span></div>
+    </div>
+  </section>
+
+  <footer>
+    Xinyue Zhao &middot; Scheller College of Business, Georgia Institute of Technology &middot;
+    <a href="mailto:xzhao470@gatech.edu">xzhao470@gatech.edu</a>
+  </footer>
+
+</div>
+</body>
+</html>
