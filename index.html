@@ -30,7 +30,7 @@
 
     --text:"Libre Franklin","Helvetica Neue",Helvetica,Arial,sans-serif;
     --display:"Source Serif 4","Source Serif Pro",Georgia,"Times New Roman",serif;
-    --max:712px;
+    --max:1068px;
   }
   @media (prefers-color-scheme:dark){
     :root{
@@ -49,7 +49,7 @@
   html{-webkit-text-size-adjust:100%}
   body{
     margin:0; background:var(--bg); color:var(--fg);
-    font-family:var(--text); font-size:16.5px; line-height:1.68;
+    font-family:var(--text); font-size:17.5px; line-height:1.66;
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   }
   .wrap{max-width:var(--max); margin:0 auto; padding:clamp(44px,7vw,78px) 26px 72px}
@@ -61,20 +61,19 @@
   /* ---------- masthead ---------- */
   header{display:flex; align-items:center; gap:26px; flex-wrap:wrap}
   #photo{
-    width:96px; height:96px; flex:0 0 auto;
-    object-fit:cover; border-radius:50%;
-    filter:saturate(.92);
+    width:132px; height:132px; flex:0 0 auto;
+    object-fit:cover; border-radius:2px;
   }
   .id{flex:1 1 17rem; min-width:15rem}
   h1{
     font-family:var(--display); font-weight:600;
-    font-size:clamp(34px,5.6vw,44px); line-height:1.06; letter-spacing:-.022em;
+    font-size:clamp(38px,5.4vw,50px); line-height:1.06; letter-spacing:-.022em;
     margin:0 0 9px;
   }
-  .role{margin:0; font-size:15px; line-height:1.5; color:var(--fg-muted)}
-  .role .aff{color:var(--fg)}
+  .role{margin:0; font-size:16.5px; line-height:1.5; color:var(--fg)}
+  .role .aff{font-weight:600}
 
-  .contact{margin:13px 0 0; font-size:14px; color:var(--fg-faint)}
+  .contact{margin:14px 0 0; font-size:15px; color:var(--fg)}
   .contact a{color:var(--accent); text-decoration:none; font-weight:500}
   .contact a:hover{text-decoration:underline}
   .contact span{margin:0 .55em; color:var(--border)}
@@ -82,53 +81,53 @@
   /* ---------- sections ---------- */
   section{margin-top:52px}
   h2{
-    font-family:var(--text); font-size:12px; font-weight:600;
-    text-transform:uppercase; letter-spacing:.085em; color:var(--fg-faint);
-    margin:0 0 22px; padding-bottom:9px; border-bottom:1px solid var(--border);
+    font-family:var(--text); font-size:15.5px; font-weight:600;
+    text-transform:uppercase; letter-spacing:.1em; color:var(--fg);
+    margin:0 0 24px; padding-bottom:11px; border-bottom:1px solid var(--border);
   }
 
-  .bio{margin:0 0 20px; max-width:34em}
-  .interests{font-size:14.5px; color:var(--fg-muted)}
+  .bio{margin:0 0 22px; max-width:54em}
+  .interests{font-size:16px; color:var(--fg)}
   .interests b{
-    font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.085em;
-    color:var(--fg-faint); margin-right:.75em;
+    font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
+    color:var(--fg); margin-right:.8em;
   }
 
   /* ---------- papers ---------- */
   .paper + .paper{margin-top:30px; padding-top:30px; border-top:1px solid var(--rule-soft)}
   .kind{
-    display:block; font-size:11.5px; font-weight:600;
-    text-transform:uppercase; letter-spacing:.085em; color:var(--accent);
-    margin-bottom:7px;
+    display:block; font-size:13px; font-weight:600;
+    text-transform:uppercase; letter-spacing:.09em; color:var(--accent);
+    margin-bottom:8px;
   }
   .paper h3{
-    font-family:var(--display); font-weight:600; font-size:20px; line-height:1.28;
+    font-family:var(--display); font-weight:600; font-size:23px; line-height:1.26;
     letter-spacing:-.008em; margin:0 0 6px; color:var(--fg);
   }
-  .authors{margin:0 0 10px; font-size:14.5px; color:var(--fg-faint)}
-  .authors .me{color:var(--fg); font-weight:600}
-  .summary{margin:0; font-size:15px; line-height:1.62; color:var(--fg-muted); max-width:36em}
+  .authors{margin:0 0 11px; font-size:16px; color:var(--fg)}
+  .authors .me{font-weight:600}
+  .summary{margin:0; font-size:16.5px; line-height:1.62; color:var(--fg-muted); max-width:54em}
   .venues{
-    margin:11px 0 0; font-size:13px; line-height:1.6; color:var(--fg-faint); max-width:36em;
+    margin:13px 0 0; font-size:14.5px; line-height:1.6; color:var(--fg); max-width:54em;
   }
   .venues b{
-    font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.085em;
-    color:var(--fg-faint);
+    font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
+    color:var(--fg);
   }
-  .links{margin:11px 0 0; font-size:13.5px; font-weight:500}
+  .links{margin:13px 0 0; font-size:15px; font-weight:500}
   .links a{color:var(--accent); text-decoration:none}
   .links a:hover{text-decoration:underline}
   .links span{margin:0 .5em; color:var(--border)}
-  .avail{margin:11px 0 0; font-size:13px; font-style:italic; color:var(--fg-faint)}
+  .avail{margin:13px 0 0; font-size:14.5px; font-style:italic; color:var(--fg)}
 
   /* ---------- teaching ---------- */
-  .course{display:flex; gap:18px; align-items:baseline; font-size:15px}
-  .course .name{font-family:var(--display); font-size:17px; font-weight:600}
-  .course .where{color:var(--fg-faint); font-size:13.5px; margin-left:auto; white-space:nowrap}
+  .course{display:flex; gap:18px; align-items:baseline; font-size:16px}
+  .course .name{font-family:var(--display); font-size:19px; font-weight:600}
+  .course .where{color:var(--fg); font-size:15px; margin-left:auto; white-space:nowrap}
 
   @media (max-width:560px){
     header{gap:20px}
-    #photo{width:80px; height:80px}
+    #photo{width:104px; height:104px}
     .course{display:block}
     .course .where{margin:2px 0 0}
   }
@@ -154,7 +153,7 @@
     <p class="bio">My research studies how financial distress propagates to households and firms, with
       particular attention to credit access and lender intervention. I also study how AI agents and machine
       learning can open new empirical questions in economics and finance.</p>
-    <p class="interests"><b>Interests</b>Household finance &middot; Financial distress &middot; AI agents</p>
+    <p class="interests"><b>Research Interests</b>Household finance &middot; Financial distress &middot; AI agents</p>
   </section>
 
   <section id="publications">
@@ -169,7 +168,7 @@
         months of hourly predictions, LLM agents perform broadly comparably to Federal Reserve nowcasts and the
         Bloomberg professional consensus.</p>
       <p class="links">
-        <a href="https://arxiv.org/abs/2608.30110">arXiv</a><span>/</span><a href="https://livemacroeval.github.io/">Live benchmark</a>
+        <a href="https://arxiv.org/abs/2608.30110">Paper</a><span>/</span><a href="https://livemacroeval.github.io/">Website</a>
       </p>
     </article>
   </section>
@@ -184,7 +183,7 @@
         consumer credit limits. Credit-constrained households cannot replace the lost credit and face
         persistent declines in borrowing capacity, revealing a retail credit card channel through which
         retailer bankruptcies impose lasting externalities on households.</p>
-      <p class="venues"><b>Presented</b><br>American Finance Association Annual Meeting 2027 &middot;
+      <p class="venues"><b>Presented/Scheduled</b><br>American Finance Association Annual Meeting 2027 &middot;
         Northern Finance Association Annual Meeting 2026 &middot; Boulder Summer Conference (poster) 2026 &middot;
         Georgia Tech &ndash; Atlanta Fed Household Finance Conference 2026</p>
       <p class="avail">Draft available on request.</p>
@@ -197,7 +196,7 @@
         in 67% of covenant violations, 22% of them involving material terms. Waived firms face larger increases
         in interest expenses, deeper investment cuts, and higher bankruptcy risk, consistent with creditor rent
         extraction rather than pure borrower relief.</p>
-      <p class="venues"><b>Presented</b><br>AI and the Future of Finance Conference 2026 (poster) &middot;
+      <p class="venues"><b>Presented/Scheduled</b><br>AI and the Future of Finance Conference 2026 (poster) &middot;
         Georgia Tech 2025</p>
       <p class="avail">Draft available on request.</p>
     </article>
@@ -207,7 +206,7 @@
     <h2>Teaching</h2>
     <p class="course">
       <span class="name">MGT 4066: Corporate Restructuring</span>
-      <span class="where">Georgia Tech</span>
+      <span class="where">2026 Spring</span>
     </p>
   </section>
 
