@@ -5,8 +5,8 @@ Static site. No build step. `index.html` is the whole page.
 ## Files
 - `index.html` — the page (all CSS inline)
 - `assets/Xinyue_Zhao_CV.pdf` — built from the Overleaf source
-- `assets/photo.jpg` — optional; drop a headshot here and it appears automatically.
-  If the file is absent the page silently omits the image.
+- `assets/photo.jpg` — headshot (440x440, cropped from `photo.jpeg`). If the file is
+  absent the page silently omits the image.
 - `cv-source/` — the Overleaf clone (git-ignored, not published)
 
 ## Preview locally
@@ -32,5 +32,5 @@ cd cv-source && git pull && pdflatex main.tex && cp main.pdf ../assets/Xinyue_Zh
 ```
 
 ## Note on unpublished work
-Only the EMNLP paper links out (arXiv + benchmark site). The two working papers and the
-work-in-progress items list titles and summaries only — no PDFs are hosted or linked.
+Only the EMNLP paper links out (arXiv + benchmark site). The two working papers list
+titles and summaries only — no PDFs are hosted or linked.
