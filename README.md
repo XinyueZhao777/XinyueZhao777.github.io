@@ -2,6 +2,10 @@
 
 Static site. No build step. `index.html` is the whole page.
 
+Type and neutral colors follow livemacroeval.github.io so the two sites read as a
+set: Source Serif 4 for the name and paper titles, Libre Franklin for body text
+and labels. The one accent is a dark navy (`#193f66`, `#8fb5dd` in dark mode).
+
 ## Files
 - `index.html` — the page (all CSS inline)
 - `assets/Xinyue_Zhao_CV.pdf` — built from the Overleaf source

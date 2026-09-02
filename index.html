@@ -10,113 +10,127 @@
 <meta property="og:description" content="PhD candidate in Finance, Georgia Institute of Technology.">
 <meta property="og:type" content="profile">
 <meta property="og:image" content="assets/photo.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23193f66'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='600' fill='%23ffffff' text-anchor='middle'>XZ</text></svg>">
 <style>
+  /* Type and neutrals follow livemacroeval.github.io: Source Serif 4 for
+     titles, Libre Franklin for everything else. The teal/orange pair there is
+     replaced by a single dark navy, used sparingly. */
   :root{
-    --bg:#fdfdfc; --panel:#ffffff; --ink:#1c1c1a; --muted:#5f5f58;
-    --faint:#8d8d84; --rule:#e4e2dc; --accent:#8a5a2b; --accent-soft:#f3ede4;
-    --max:44rem;
+    --bg:#ffffff;
+    --fg:#14161a;
+    --fg-muted:#3a4049;
+    --fg-faint:#565d68;
+    --border:#d8dce3;
+    --rule-soft:#eceef2;
+    --accent:#193f66;       /* navy, 10.4:1 on white */
+    --accent-soft:#eef2f7;
+
+    --text:"Libre Franklin","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --display:"Source Serif 4","Source Serif Pro",Georgia,"Times New Roman",serif;
+    --max:712px;
   }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#16150f; --panel:#1d1c15; --ink:#eceae2; --muted:#b3b0a4;
-           --faint:#8b887c; --rule:#33312a; --accent:#d3a26a; --accent-soft:#2a261c; }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0f1115;
+      --fg:#eef0f4;
+      --fg-muted:#c2c8d2;
+      --fg-faint:#9aa2af;
+      --border:#2b303a;
+      --rule-soft:#1e222a;
+      --accent:#8fb5dd;     /* 8.6:1 on dark */
+      --accent-soft:#16233a;
+    }
   }
+
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
   body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font:400 16.5px/1.65 "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-    padding:clamp(1.75rem,5vw,4.5rem) 1.25rem 4.5rem;
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:var(--text); font-size:16.5px; line-height:1.68;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   }
-  .wrap{max-width:var(--max); margin:0 auto}
+  .wrap{max-width:var(--max); margin:0 auto; padding:clamp(44px,7vw,78px) 26px 72px}
   a{color:var(--accent); text-underline-offset:2px; text-decoration-thickness:.06em}
-  a:hover{text-decoration-thickness:.12em}
+  a:hover{text-decoration-thickness:.11em}
+  p{margin:0 0 15px}
+  strong,b{font-weight:600}
 
-  /* ---- header ---- */
-  header{display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap}
+  /* ---------- masthead ---------- */
+  header{display:flex; align-items:center; gap:26px; flex-wrap:wrap}
   #photo{
-    width:106px; height:106px; flex:0 0 auto;
+    width:96px; height:96px; flex:0 0 auto;
     object-fit:cover; border-radius:50%;
-    border:1px solid var(--rule);
+    filter:saturate(.92);
   }
-  .id{flex:1 1 16rem; min-width:14rem}
+  .id{flex:1 1 17rem; min-width:15rem}
   h1{
-    font-size:clamp(1.85rem,5.5vw,2.4rem); line-height:1.15;
-    margin:0 0 .35rem; letter-spacing:-.015em; font-weight:600;
+    font-family:var(--display); font-weight:600;
+    font-size:clamp(34px,5.6vw,44px); line-height:1.06; letter-spacing:-.022em;
+    margin:0 0 9px;
   }
-  .role{margin:0; color:var(--muted); font-size:1.02rem}
-  .role strong{color:var(--ink); font-weight:600}
+  .role{margin:0; font-size:15px; line-height:1.5; color:var(--fg-muted)}
+  .role .aff{color:var(--fg)}
 
-  .links{margin:.9rem 0 0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:.45rem}
-  .links a{
-    display:inline-block; text-decoration:none; color:var(--muted);
-    font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
-    font-size:.8rem; letter-spacing:.02em;
-    border:1px solid var(--rule); border-radius:999px; padding:.24rem .72rem;
-    background:var(--panel); transition:.15s;
-  }
-  .links a:hover{border-color:var(--accent); color:var(--accent); background:var(--accent-soft)}
+  .contact{margin:13px 0 0; font-size:14px; color:var(--fg-faint)}
+  .contact a{color:var(--accent); text-decoration:none; font-weight:500}
+  .contact a:hover{text-decoration:underline}
+  .contact span{margin:0 .55em; color:var(--border)}
 
-  /* ---- sections ---- */
-  section{margin-top:2.9rem}
+  /* ---------- sections ---------- */
+  section{margin-top:52px}
   h2{
-    font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
-    font-size:.74rem; font-weight:600; text-transform:uppercase; letter-spacing:.14em;
-    color:var(--faint); margin:0 0 1.1rem; padding-bottom:.5rem;
-    border-bottom:1px solid var(--rule);
+    font-family:var(--text); font-size:12px; font-weight:600;
+    text-transform:uppercase; letter-spacing:.085em; color:var(--fg-faint);
+    margin:0 0 22px; padding-bottom:9px; border-bottom:1px solid var(--border);
   }
-  p{margin:0 0 1rem}
-  .lede{color:var(--muted)}
-  .interests{
-    margin:0; padding-top:.85rem; border-top:1px solid var(--rule);
-    font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
-    font-size:.85rem; color:var(--muted);
-  }
+
+  .bio{margin:0 0 20px; max-width:34em}
+  .interests{font-size:14.5px; color:var(--fg-muted)}
   .interests b{
-    color:var(--faint); font-weight:600; text-transform:uppercase;
-    letter-spacing:.1em; font-size:.72rem; margin-right:.5rem;
+    font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.085em;
+    color:var(--fg-faint); margin-right:.75em;
   }
 
-  /* ---- papers ---- */
-  .paper{margin:0 0 1.9rem; padding-left:1rem; border-left:2px solid var(--rule)}
-  .paper:last-child{margin-bottom:0}
-  .paper h3{margin:0 0 .3rem; font-size:1.06rem; font-weight:600; line-height:1.35}
-  .authors{margin:0 0 .55rem; font-size:.93rem; color:var(--muted)}
-  .authors .me{color:var(--ink); font-weight:600}
-  .summary{margin:0; font-size:.95rem; color:var(--muted)}
-  .meta{
-    margin:.65rem 0 0; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
-    font-size:.78rem; color:var(--faint); line-height:1.6;
+  /* ---------- papers ---------- */
+  .paper + .paper{margin-top:30px; padding-top:30px; border-top:1px solid var(--rule-soft)}
+  .kind{
+    display:block; font-size:11.5px; font-weight:600;
+    text-transform:uppercase; letter-spacing:.085em; color:var(--accent);
+    margin-bottom:7px;
   }
-  .meta b{color:var(--muted); font-weight:600}
-  .tag{
-    display:inline-block; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
-    font-size:.68rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--accent); background:var(--accent-soft);
-    border-radius:3px; padding:.12rem .45rem; margin-bottom:.5rem;
+  .paper h3{
+    font-family:var(--display); font-weight:600; font-size:20px; line-height:1.28;
+    letter-spacing:-.008em; margin:0 0 6px; color:var(--fg);
   }
-  .paper .out{margin:.6rem 0 0; display:flex; gap:.4rem; flex-wrap:wrap}
-  .paper .out a{
-    text-decoration:none; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
-    font-size:.76rem; border:1px solid var(--rule); border-radius:4px;
-    padding:.18rem .55rem; color:var(--muted); background:var(--panel);
+  .authors{margin:0 0 10px; font-size:14.5px; color:var(--fg-faint)}
+  .authors .me{color:var(--fg); font-weight:600}
+  .summary{margin:0; font-size:15px; line-height:1.62; color:var(--fg-muted); max-width:36em}
+  .venues{
+    margin:11px 0 0; font-size:13px; line-height:1.6; color:var(--fg-faint); max-width:36em;
   }
-  .paper .out a:hover{border-color:var(--accent); color:var(--accent)}
-  .avail{
-    margin:.6rem 0 0; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
-    font-size:.76rem; color:var(--faint); font-style:italic;
+  .venues b{
+    font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.085em;
+    color:var(--fg-faint);
   }
+  .links{margin:11px 0 0; font-size:13.5px; font-weight:500}
+  .links a{color:var(--accent); text-decoration:none}
+  .links a:hover{text-decoration:underline}
+  .links span{margin:0 .5em; color:var(--border)}
+  .avail{margin:11px 0 0; font-size:13px; font-style:italic; color:var(--fg-faint)}
 
-  /* ---- simple rows ---- */
-  .row{display:flex; gap:1.1rem; margin:0; align-items:baseline}
-  .when{
-    flex:0 0 5.5rem; font-family:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
-    font-size:.8rem; color:var(--faint); text-align:right;
-  }
-  .what{flex:1 1 auto}
-  @media (max-width:520px){
-    .row{display:block}
-    .when{text-align:left; margin-bottom:.1rem}
+  /* ---------- teaching ---------- */
+  .course{display:flex; gap:18px; align-items:baseline; font-size:15px}
+  .course .name{font-family:var(--display); font-size:17px; font-weight:600}
+  .course .where{color:var(--fg-faint); font-size:13.5px; margin-left:auto; white-space:nowrap}
+
+  @media (max-width:560px){
+    header{gap:20px}
+    #photo{width:80px; height:80px}
+    .course{display:block}
+    .course .where{margin:2px 0 0}
   }
 </style>
 </head>
@@ -128,18 +142,16 @@
     <div class="id">
       <h1>Xinyue Zhao</h1>
       <p class="role">PhD Candidate in Finance<br>
-        <strong>Scheller College of Business</strong>, Georgia Institute of Technology</p>
-      <ul class="links">
-        <li><a href="mailto:xzhao470@gatech.edu">Email</a></li>
-        <li><a href="assets/Xinyue_Zhao_CV.pdf">CV</a></li>
-        <li><a href="https://www.linkedin.com/in/xinyuezhao7" rel="me">LinkedIn</a></li>
-      </ul>
+        <span class="aff">Scheller College of Business</span>, Georgia Institute of Technology</p>
+      <p class="contact">
+        <a href="mailto:xzhao470@gatech.edu">xzhao470@gatech.edu</a><span>/</span><a href="assets/Xinyue_Zhao_CV.pdf">CV</a><span>/</span><a href="https://www.linkedin.com/in/xinyuezhao7" rel="me">LinkedIn</a>
+      </p>
     </div>
   </header>
 
   <section id="about">
     <h2>About</h2>
-    <p class="lede">My research studies how financial distress propagates to households and firms, with
+    <p class="bio">My research studies how financial distress propagates to households and firms, with
       particular attention to credit access and lender intervention. I also study how AI agents and machine
       learning can open new empirical questions in economics and finance.</p>
     <p class="interests"><b>Interests</b>Household finance &middot; Financial distress &middot; AI agents</p>
@@ -149,16 +161,15 @@
     <h2>Publications</h2>
 
     <article class="paper">
-      <span class="tag">EMNLP 2026 Main</span>
+      <span class="kind">EMNLP 2026 Main</span>
       <h3>Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM Nowcasts on Macroeconomic Indicators</h3>
       <p class="authors"><span class="me">Xinyue Zhao</span>, Ruiyi Zhang, Liqin Ye, Rui Cao, Pengtao Xie, Sudheer Chava</p>
       <p class="summary">LiveMacroEval is a live, contamination-resistant benchmark testing whether web-enabled
         LLM agents can nowcast 16 major U.S. macroeconomic indicators before their official release. Across six
         months of hourly predictions, LLM agents perform broadly comparably to Federal Reserve nowcasts and the
         Bloomberg professional consensus.</p>
-      <p class="out">
-        <a href="https://arxiv.org/abs/2608.30110">arXiv</a>
-        <a href="https://livemacroeval.github.io/">Live benchmark</a>
+      <p class="links">
+        <a href="https://arxiv.org/abs/2608.30110">arXiv</a><span>/</span><a href="https://livemacroeval.github.io/">Live benchmark</a>
       </p>
     </article>
   </section>
@@ -173,7 +184,7 @@
         consumer credit limits. Credit-constrained households cannot replace the lost credit and face
         persistent declines in borrowing capacity, revealing a retail credit card channel through which
         retailer bankruptcies impose lasting externalities on households.</p>
-      <p class="meta"><b>Presented / scheduled:</b> American Finance Association Annual Meeting 2027 &middot;
+      <p class="venues"><b>Presented</b><br>American Finance Association Annual Meeting 2027 &middot;
         Northern Finance Association Annual Meeting 2026 &middot; Boulder Summer Conference (poster) 2026 &middot;
         Georgia Tech &ndash; Atlanta Fed Household Finance Conference 2026</p>
       <p class="avail">Draft available on request.</p>
@@ -186,7 +197,7 @@
         in 67% of covenant violations, 22% of them involving material terms. Waived firms face larger increases
         in interest expenses, deeper investment cuts, and higher bankruptcy risk, consistent with creditor rent
         extraction rather than pure borrower relief.</p>
-      <p class="meta"><b>Presented / scheduled:</b> AI and the Future of Finance Conference 2026 (poster) &middot;
+      <p class="venues"><b>Presented</b><br>AI and the Future of Finance Conference 2026 (poster) &middot;
         Georgia Tech 2025</p>
       <p class="avail">Draft available on request.</p>
     </article>
@@ -194,10 +205,10 @@
 
   <section id="teaching">
     <h2>Teaching</h2>
-    <div class="row">
-      <div class="when">Georgia Tech</div>
-      <div class="what"><strong>MGT 4066: Corporate Restructuring</strong></div>
-    </div>
+    <p class="course">
+      <span class="name">MGT 4066: Corporate Restructuring</span>
+      <span class="where">Georgia Tech</span>
+    </p>
   </section>
 
 </div>
