@@ -95,7 +95,7 @@
     width:156px; height:156px; flex:0 0 auto;
     object-fit:cover; border-radius:2px;
   }
-  .id{flex:1 1 17rem; min-width:15rem}
+  .id{flex:1 1 17rem; min-width:15rem; text-align:right; margin-left:auto}
   h1{
     font-family:var(--display); font-weight:600;
     font-size:clamp(42px,5.4vw,56px); line-height:1.06; letter-spacing:-.022em;
@@ -152,6 +152,7 @@
 
   @media (max-width:560px){
     header{gap:20px}
+    .id{text-align:left}
     #photo{width:120px; height:120px}
     h2{font-size:32px}
     .course{display:block}
@@ -176,6 +177,7 @@
 <main class="wrap" id="top">
 
   <header>
+    <img id="photo" src="assets/photo.jpg" alt="Xinyue Zhao" onerror="this.remove()">
     <div class="id">
       <h1>Xinyue Zhao</h1>
       <p class="role">PhD Candidate in Finance<br>
@@ -184,7 +186,6 @@
         <a href="mailto:xzhao470@gatech.edu">xzhao470@gatech.edu</a><span>/</span><a href="assets/Xinyue_Zhao_CV.pdf">CV</a><span>/</span><a href="https://www.linkedin.com/in/xinyuezhao7" rel="me">LinkedIn</a>
       </p>
     </div>
-    <img id="photo" src="assets/photo.jpg" alt="Xinyue Zhao" onerror="this.remove()">
   </header>
 
   <section id="about">
