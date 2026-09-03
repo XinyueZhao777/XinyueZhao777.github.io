@@ -53,7 +53,7 @@
   html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:78px}
   body{
     margin:0; background:var(--bg); color:var(--fg);
-    font-family:var(--text); font-size:18.5px; line-height:1.66;
+    font-family:var(--text); font-size:19.5px; line-height:1.64;
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   }
   .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--gutter)}
@@ -73,13 +73,13 @@
   }
   nav .wrap{display:flex; align-items:baseline; gap:24px; height:62px; padding-top:20px}
   nav .brand{
-    font-family:var(--display); font-weight:600; font-size:23px;
+    font-family:var(--display); font-weight:600; font-size:24px;
     letter-spacing:-.015em; margin-right:auto; color:var(--fg); text-decoration:none;
   }
   nav .navlinks{display:flex; gap:22px}
   nav .navlinks a{
     font-family:var(--text); color:var(--fg); text-decoration:none;
-    font-size:16px; font-weight:500;
+    font-size:17px; font-weight:500;
   }
   nav .navlinks a:hover{text-decoration:underline}
   @media (max-width:560px){
@@ -98,11 +98,11 @@
   .id{flex:1 1 17rem; min-width:15rem}
   h1{
     font-family:var(--display); font-weight:600;
-    font-size:clamp(40px,5.4vw,54px); line-height:1.06; letter-spacing:-.022em;
+    font-size:clamp(42px,5.4vw,56px); line-height:1.06; letter-spacing:-.022em;
     margin:0 0 9px;
   }
-  .role{margin:0; font-size:17.5px; line-height:1.5; color:var(--fg)}
-  .contact{margin:14px 0 0; font-size:16px; color:var(--fg)}
+  .role{margin:0; font-size:18.5px; line-height:1.5; color:var(--fg)}
+  .contact{margin:14px 0 0; font-size:17px; color:var(--fg)}
   .contact a{color:var(--accent); text-decoration:none; font-weight:500}
   .contact a:hover{text-decoration:underline}
   .contact span{margin:0 .55em; color:var(--border)}
@@ -110,7 +110,7 @@
   /* ---------- sections ---------- */
   section{margin-top:72px}
   h2{
-    font-family:var(--display); font-size:36px; font-weight:600;
+    font-family:var(--display); font-size:38px; font-weight:600;
     letter-spacing:-.012em; line-height:1.2; color:var(--fg);
     margin:0 0 26px; text-align:center;
   }
@@ -120,37 +120,40 @@
   /* ---------- papers ---------- */
   .paper + .paper{margin-top:36px; padding-top:34px; border-top:1px solid var(--rule-soft)}
   .kind{
-    display:block; font-size:13.5px; font-weight:600;
+    margin:0 0 8px; font-size:14.5px; font-weight:700;
     text-transform:uppercase; letter-spacing:.09em; color:var(--emph);
-    margin-bottom:8px;
   }
+  .kind a{color:var(--accent); text-decoration:none; font-weight:600}
+  .kind a:hover{text-decoration:underline}
+  .kind .sep{margin:0 .6em; color:var(--border); font-weight:400}
+  .paper h3 a{
+    color:inherit; text-decoration:underline; text-decoration-thickness:1px;
+    text-decoration-color:var(--border); text-underline-offset:5px;
+  }
+  .paper h3 a:hover{text-decoration-color:var(--accent)}
   .paper h3{
-    font-family:var(--display); font-weight:600; font-size:24.5px; line-height:1.26;
+    font-family:var(--display); font-weight:600; font-size:26px; line-height:1.26;
     letter-spacing:-.008em; margin:0 0 6px; color:var(--fg);
   }
-  .authors{margin:0 0 11px; font-size:17px; color:var(--fg)}
+  .authors{margin:0 0 11px; font-size:18px; color:var(--fg)}
   .authors .me{font-weight:600}
-  .summary{margin:0; font-size:17.5px; line-height:1.66; color:var(--fg-muted)}
-  .venues{margin:14px 0 0; font-size:14.5px; line-height:1.6; color:var(--fg-muted)}
+  .summary{margin:0; font-size:18.5px; line-height:1.64; color:var(--fg-muted)}
+  .venues{margin:14px 0 0; font-size:15.5px; line-height:1.6; color:var(--fg-muted)}
   .venues b{
-    font-size:12.5px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
+    font-size:13.5px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
     color:var(--accent);
   }
-  .links{margin:13px 0 0; font-size:16px; font-weight:500}
-  .links a{color:var(--accent); text-decoration:none}
-  .links a:hover{text-decoration:underline}
-  .links span{margin:0 .5em; color:var(--border)}
-  .avail{margin:12px 0 0; font-size:15.5px; font-style:italic; color:var(--fg)}
+  .avail{margin:12px 0 0; font-size:16.5px; font-style:italic; color:var(--fg)}
 
   /* ---------- teaching ---------- */
-  .course{display:flex; gap:18px; align-items:baseline; font-size:17px}
-  .course .name{font-family:var(--display); font-size:20.5px; font-weight:600}
-  .course .where{color:var(--fg); font-size:16px; margin-left:auto; white-space:nowrap}
+  .course{display:flex; gap:18px; align-items:baseline; font-size:18px}
+  .course .name{font-family:var(--display); font-size:22px; font-weight:600}
+  .course .where{color:var(--fg); font-size:17px; margin-left:auto; white-space:nowrap}
 
   @media (max-width:560px){
     header{gap:20px}
     #photo{width:120px; height:120px}
-    h2{font-size:30px}
+    h2{font-size:32px}
     .course{display:block}
     .course .where{margin:2px 0 0}
   }
@@ -196,16 +199,13 @@
     <h2>Publications</h2>
 
     <article class="paper">
-      <span class="kind">EMNLP 2026 Main</span>
-      <h3>Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM Nowcasts on Macroeconomic Indicators</h3>
+      <p class="kind">EMNLP 2026 Main<span class="sep">/</span><a href="https://livemacroeval.github.io/">Website</a></p>
+      <h3><a href="https://arxiv.org/abs/2608.30110">Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM Nowcasts on Macroeconomic Indicators</a></h3>
       <p class="authors"><span class="me">Xinyue Zhao</span>, Ruiyi Zhang, Liqin Ye, Rui Cao, Pengtao Xie, Sudheer Chava</p>
       <p class="summary">LiveMacroEval is a live, contamination-resistant benchmark testing whether web-enabled
         LLM agents can nowcast 16 major U.S. macroeconomic indicators before their official release. Across six
         months of hourly predictions, LLM agents perform broadly comparably to Federal Reserve nowcasts and the
         Bloomberg professional consensus.</p>
-      <p class="links">
-        <a href="https://arxiv.org/abs/2608.30110">Paper</a><span>/</span><a href="https://livemacroeval.github.io/">Website</a>
-      </p>
     </article>
   </section>
 
