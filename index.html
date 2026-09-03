@@ -13,11 +13,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23193f66'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='600' fill='%23ffffff' text-anchor='middle'>XZ</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%230f3d5c'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='600' fill='%23ffffff' text-anchor='middle'>XZ</text></svg>">
 <style>
   /* Type and neutrals follow livemacroeval.github.io: Source Serif 4 for
-     titles, Libre Franklin for everything else. The teal/orange pair there is
-     replaced by a single dark navy, used sparingly. */
+     titles, Libre Franklin for everything else. Colour has the same two roles
+     as there (teal links, orange emphasis) in a quieter pair: prussian blue for
+     links, oxblood for emphasis. */
   :root{
     --bg:#ffffff;
     --fg:#14161a;
@@ -25,7 +26,8 @@
     --fg-faint:#565d68;
     --border:#d8dce3;
     --rule-soft:#eceef2;
-    --accent:#193f66;       /* navy, 10.4:1 on white */
+    --accent:#0f3d5c;       /* prussian blue: links, 11.5:1 on white */
+    --emph:#7a2e2e;         /* oxblood: prose emphasis and status tags, 9.6:1 */
     --accent-soft:#eef2f7;
 
     --text:"Libre Franklin","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -42,6 +44,7 @@
       --border:#2b303a;
       --rule-soft:#1e222a;
       --accent:#8fb5dd;     /* 8.6:1 on dark */
+      --emph:#d9a09a;       /* 8.1:1 on dark */
       --accent-soft:#16233a;
     }
   }
@@ -112,7 +115,7 @@
   }
 
   .bio{margin:0 0 20px}
-  .hl{color:var(--accent); font-style:normal}
+  .hl{color:var(--emph); font-style:normal}
   .interests{font-size:16px; color:var(--fg)}
   .interests b{
     font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
@@ -123,7 +126,7 @@
   .paper + .paper{margin-top:44px}
   .kind{
     display:block; font-size:13px; font-weight:600;
-    text-transform:uppercase; letter-spacing:.09em; color:var(--accent);
+    text-transform:uppercase; letter-spacing:.09em; color:var(--emph);
     margin-bottom:8px;
   }
   .paper h3{

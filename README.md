@@ -4,7 +4,8 @@ Static site. No build step. `index.html` is the whole page.
 
 Type and neutral colors follow livemacroeval.github.io so the two sites read as a
 set: Source Serif 4 for the name and paper titles, Libre Franklin for body text
-and labels. The one accent is a dark navy (`#193f66`, `#8fb5dd` in dark mode).
+and labels. Colour has two roles, as on that site: prussian blue `#0f3d5c` for links
+and oxblood `#7a2e2e` for prose emphasis and status tags (`#8fb5dd` / `#d9a09a` in dark mode).
 
 ## Files
 - `index.html` — the page (all CSS inline)
