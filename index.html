@@ -141,7 +141,9 @@
     font-family:var(--display); font-weight:600; font-size:26px; line-height:1.26;
     letter-spacing:-.008em; margin:0 0 6px; color:var(--fg);
   }
-  .authors{margin:0 0 11px; font-size:18px; color:var(--fg)}
+  .authors{margin:0 0 4px; font-size:18px; color:var(--fg)}
+  .authors sup,.note sup{font-size:.7em; line-height:0; vertical-align:.45em}
+  .note{margin:0 0 11px; font-size:14px; color:var(--fg-muted)}
   .summary{margin:0; font-size:18.5px; line-height:1.64; color:var(--fg-muted)}
   .venues{margin:14px 0 0; font-size:15.5px; line-height:1.6; color:var(--fg-muted)}
   .venues b{
@@ -208,7 +210,8 @@
       <p class="kind">EMNLP 2026 Main</p>
       <h3><a href="https://arxiv.org/abs/2608.30110">Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM Nowcasts on Macroeconomic Indicators</a>
         <a class="site" href="https://livemacroeval.github.io/">Website</a></h3>
-      <p class="authors">Xinyue Zhao, Ruiyi Zhang, Liqin Ye, Rui Cao, Pengtao Xie, Sudheer Chava</p>
+      <p class="authors">Xinyue Zhao<sup>*</sup>, Ruiyi Zhang<sup>*</sup>, Liqin Ye, Rui Cao, Pengtao Xie, Sudheer Chava<sup>&dagger;</sup></p>
+      <p class="note"><sup>*</sup>Equal contribution &nbsp;&middot;&nbsp; <sup>&dagger;</sup>Corresponding author</p>
       <p class="summary">LiveMacroEval is a live, contamination-resistant benchmark testing whether web-enabled
         LLM agents can nowcast 16 major U.S. macroeconomic indicators before their official release. Across six
         months of hourly predictions, LLM agents perform broadly comparably to Federal Reserve nowcasts and the
