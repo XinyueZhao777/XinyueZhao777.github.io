@@ -49,7 +49,7 @@
   html{-webkit-text-size-adjust:100%}
   body{
     margin:0; background:var(--bg); color:var(--fg);
-    font-family:var(--text); font-size:17.5px; line-height:1.66;
+    font-family:var(--text); font-size:17.5px; line-height:1.68;
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   }
   .wrap{max-width:var(--max); margin:0 auto; padding:clamp(44px,7vw,78px) 26px 72px}
@@ -61,7 +61,7 @@
   /* ---------- masthead ---------- */
   header{display:flex; align-items:center; gap:30px; flex-wrap:wrap}
   #photo{
-    width:112px; height:112px; flex:0 0 auto;
+    width:156px; height:156px; flex:0 0 auto;
     object-fit:cover; border-radius:2px;
   }
   .id{flex:1 1 17rem; min-width:15rem}
@@ -81,12 +81,14 @@
   /* ---------- sections ---------- */
   section{margin-top:52px}
   h2{
+    display:flex; align-items:center; gap:18px;
     font-family:var(--text); font-size:15.5px; font-weight:600;
     text-transform:uppercase; letter-spacing:.1em; color:var(--fg);
-    margin:0 0 24px; padding-bottom:11px; border-bottom:1px solid var(--border);
+    margin:0 0 22px;
   }
+  h2::after{content:""; flex:1 1 auto; border-top:1px solid var(--border)}
 
-  .bio{margin:0 0 22px; max-width:54em}
+  .bio{margin:0 0 22px}
   .interests{font-size:16px; color:var(--fg)}
   .interests b{
     font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
@@ -106,9 +108,9 @@
   }
   .authors{margin:0 0 11px; font-size:16px; color:var(--fg)}
   .authors .me{font-weight:600}
-  .summary{margin:0; font-size:16.5px; line-height:1.62; color:var(--fg-muted); max-width:54em}
+  .summary{margin:0; font-size:16.5px; line-height:1.68; color:var(--fg-muted)}
   .venues{
-    margin:13px 0 0; font-size:14.5px; line-height:1.6; color:var(--fg); max-width:54em;
+    margin:13px 0 0; font-size:14.5px; line-height:1.62; color:var(--fg);
   }
   .venues b{
     font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
@@ -127,7 +129,7 @@
 
   @media (max-width:560px){
     header{gap:20px}
-    #photo{width:92px; height:92px}
+    #photo{width:120px; height:120px}
     .course{display:block}
     .course .where{margin:2px 0 0}
   }
