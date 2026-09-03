@@ -91,8 +91,6 @@
     width:156px; height:156px; flex:0 0 auto;
     object-fit:cover; border-radius:2px;
   }
-  /* on wide screens the portrait hangs a little past the column edge */
-  @media (min-width:1080px){ #photo{margin-right:-56px} }
   .id{flex:1 1 17rem; min-width:15rem}
   h1{
     font-family:var(--display); font-weight:600;
@@ -106,16 +104,15 @@
   .contact span{margin:0 .55em; color:var(--border)}
 
   /* ---------- sections ---------- */
-  section{margin-top:56px}
+  section{margin-top:72px}
   h2{
-    display:flex; align-items:center; gap:20px;
     font-family:var(--display); font-size:28px; font-weight:600;
     letter-spacing:-.012em; line-height:1.2; color:var(--fg);
-    margin:0 0 24px;
+    margin:0 0 20px;
   }
-  h2::after{content:""; flex:1 1 auto; border-top:1px solid var(--border); margin-top:.15em}
 
   .bio{margin:0 0 20px}
+  .hl{color:var(--accent); font-style:normal}
   .interests{font-size:16px; color:var(--fg)}
   .interests b{
     font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
@@ -123,7 +120,7 @@
   }
 
   /* ---------- papers ---------- */
-  .paper + .paper{margin-top:38px; padding-top:36px; border-top:1px solid var(--rule-soft)}
+  .paper + .paper{margin-top:44px}
   .kind{
     display:block; font-size:13px; font-weight:600;
     text-transform:uppercase; letter-spacing:.09em; color:var(--accent);
@@ -169,7 +166,7 @@
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#publications">Publications</a>
-      <a href="#working-papers">Working Papers</a>
+      <a href="#working-papers">Working papers</a>
       <a href="#teaching">Teaching</a>
     </div>
   </div>
@@ -191,9 +188,10 @@
 
   <section id="about">
     <h2>About</h2>
-    <p class="bio">My research studies corporate debt and financial distress, and how they propagate to
-      households, with particular attention to credit and borrowing. I also study how AI agents and machine
-      learning can open new empirical questions in economics and finance.</p>
+    <p class="bio">My research studies <em class="hl">corporate debt and financial distress</em>, and how they
+      propagate to households, with particular attention to credit and borrowing. I also study how
+      <em class="hl">AI agents</em> and machine learning can open new empirical questions in economics and
+      finance.</p>
     <p class="interests"><b>Research Interests</b>Household debt &middot; Corporate debt &middot; Financial distress &middot; AI in Finance</p>
   </section>
 
@@ -215,7 +213,7 @@
   </section>
 
   <section id="working-papers">
-    <h2>Working Papers</h2>
+    <h2>Working papers</h2>
 
     <article class="paper">
       <h3>Retailer Bankruptcy and Its Spillover to Consumer Credit</h3>
