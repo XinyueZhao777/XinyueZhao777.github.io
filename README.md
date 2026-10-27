@@ -37,5 +37,5 @@ cd cv-source && git pull && pdflatex main.tex && cp main.pdf ../assets/Xinyue_Zh
 ```
 
 ## Note on unpublished work
-Only the EMNLP paper links out (arXiv + benchmark site). The two working papers list
+Only the EMNLP paper links out (ACL Anthology + benchmark site). The two working papers list
 titles and summaries only — no PDFs are hosted or linked.
