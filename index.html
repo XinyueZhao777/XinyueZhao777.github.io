@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Xinyue Zhao</title>
-<meta name="description" content="Xinyue Zhao is a PhD candidate in Finance at the Georgia Institute of Technology, studying household debt, corporate debt, financial distress, and AI in finance.">
+<meta name="description" content="Xinyue Zhao is a PhD candidate in Finance at the Georgia Institute of Technology, studying household finance, debt contracting, financial distress, and AI in finance.">
 <meta name="author" content="Xinyue Zhao">
 <meta property="og:title" content="Xinyue Zhao">
 <meta property="og:description" content="PhD candidate in Finance, Georgia Institute of Technology.">
@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://xinyuezhao777.github.io/assets/photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,600&display=swap">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%232d6fa9'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='600' fill='%23ffffff' text-anchor='middle'>XZ</text></svg>">
 <style>
   /* Type and neutrals follow livemacroeval.github.io: Source Serif 4 for
@@ -71,31 +71,26 @@
     -webkit-backdrop-filter:saturate(180%) blur(12px);
     border-bottom:1px solid var(--border);
   }
-  nav .wrap{display:flex; align-items:baseline; gap:24px; height:62px; padding-top:20px}
-  nav .brand{
-    font-family:var(--display); font-weight:600; font-size:24px;
-    letter-spacing:-.015em; margin-right:auto; color:var(--fg); text-decoration:none;
-  }
-  nav .navlinks{display:flex; gap:22px}
+  nav .wrap{display:flex; align-items:center; justify-content:center; height:56px}
+  nav .navlinks{display:flex; gap:30px}
   nav .navlinks a{
     font-family:var(--text); color:var(--fg); text-decoration:none;
     font-size:17px; font-weight:500;
   }
   nav .navlinks a:hover{text-decoration:underline}
   @media (max-width:560px){
-    nav .wrap{padding:20px 18px 0}
-    nav .brand{display:none}
-    nav .navlinks{gap:14px; margin:0 auto}
+    nav .wrap{padding:0 16px}
+    nav .navlinks{gap:16px}
     nav .navlinks a{font-size:13.5px}
   }
 
   /* ---------- masthead ---------- */
-  header{display:flex; align-items:center; gap:30px; flex-wrap:wrap}
+  header{display:flex; align-items:center; justify-content:center; gap:40px}
   #photo{
     width:156px; height:156px; flex:0 0 auto;
     object-fit:cover; border-radius:2px;
   }
-  .id{flex:1 1 17rem; min-width:15rem; text-align:right; margin-left:auto}
+  .id{flex:0 1 auto; text-align:left}
   h1{
     font-family:var(--display); font-weight:600;
     font-size:clamp(42px,5.4vw,56px); line-height:1.06; letter-spacing:-.022em;
@@ -116,13 +111,10 @@
   }
 
   .bio{margin:0}
+  .bio + .bio{margin-top:14px}
 
   /* ---------- papers ---------- */
   .paper + .paper{margin-top:36px; padding-top:34px; border-top:1px solid var(--rule-soft)}
-  .kind{
-    margin:0 0 8px; font-size:14.5px; font-weight:700;
-    text-transform:uppercase; letter-spacing:.09em; color:var(--emph);
-  }
   .paper h3 .site{
     display:inline-block; font-family:var(--text); font-size:12.5px; font-weight:600;
     letter-spacing:.09em; text-transform:uppercase; line-height:1;
@@ -130,6 +122,7 @@
     border:1px solid var(--accent); border-radius:3px; padding:5px 8px 4px;
     margin-left:.6em; vertical-align:.3em;
   }
+  .paper h3 .site + .site{margin-left:.4em}
   .paper h3 .site:hover{background:var(--accent); color:var(--bg); text-decoration:none}
   .paper h3 .site:hover{text-decoration:underline}
   .paper h3 a{
@@ -143,12 +136,24 @@
   }
   .authors{margin:0 0 11px; font-size:18px; color:var(--fg)}
   .authors sup{font-size:.7em; line-height:0; vertical-align:.45em}
-  .summary{margin:0; font-size:18.5px; line-height:1.64; color:var(--fg-muted)}
-  .venues{margin:14px 0 0; font-size:15.5px; line-height:1.6; color:var(--fg-muted)}
-  .venues b{
-    font-size:13.5px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
-    color:var(--accent);
+  .abstract summary{
+    display:inline-flex; align-items:center; gap:.45em; cursor:pointer; list-style:none;
+    font-size:16px; font-weight:600; color:var(--accent); user-select:none;
   }
+  .abstract summary::-webkit-details-marker{display:none}
+  .abstract summary::before{
+    content:""; width:.42em; height:.42em; margin-top:-.1em;
+    border-right:2px solid currentColor; border-bottom:2px solid currentColor;
+    transform:rotate(-45deg); transition:transform .15s ease;
+  }
+  .abstract[open] summary::before{transform:rotate(45deg); margin-top:-.3em}
+  .abstract summary:hover{text-decoration:underline}
+  .abstract summary:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+  .summary{margin:8px 0 0; font-size:18.5px; line-height:1.64; color:var(--fg-muted)}
+  .published{margin:12px 0 0; font-family:var(--display); font-size:16.5px; font-style:italic; font-weight:600; color:var(--fg)}
+  .published em{font-style:inherit; color:var(--emph)}
+  .venues{margin:12px 0 0; font-size:16.5px; line-height:1.6; color:var(--fg-muted)}
+  .venues b{font-weight:600; color:var(--fg)}
   .avail{margin:12px 0 0; font-size:16.5px; font-style:italic; color:var(--fg)}
 
   /* ---------- teaching ---------- */
@@ -157,9 +162,9 @@
   .course .where{color:var(--fg); font-size:17px; margin-left:auto; white-space:nowrap}
 
   @media (max-width:560px){
-    header{gap:20px}
-    .id{text-align:left}
-    #photo{width:120px; height:120px}
+    header{flex-direction:column; gap:20px; text-align:center}
+    .id{text-align:center}
+    #photo{width:132px; height:132px}
     h2{font-size:32px}
     .course{display:block}
     .course .where{margin:2px 0 0}
@@ -170,7 +175,6 @@
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="#top">Xinyue Zhao</a>
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#publications">Publications</a>
@@ -196,24 +200,28 @@
 
   <section id="about">
     <h2>About</h2>
-    <p class="bio">My research studies corporate debt and financial distress, and how they propagate to
-      households, with particular attention to credit and borrowing. I also study how AI agents and machine
-      learning can open new empirical questions in economics and finance. My research interests include
-      household debt, corporate debt, financial distress, and AI in finance.</p>
+    <p class="bio">My research studies how corporate debt and financial distress pass through to households,
+      with a focus on consumer credit and household borrowing. I also study how AI agents and machine
+      learning can open up new questions in finance.</p>
+    <p class="bio interests"><b>Research interests:</b> household finance, debt contracting, financial distress,
+      AI in finance.</p>
   </section>
 
   <section id="publications">
     <h2>Publications</h2>
 
     <article class="paper">
-      <p class="kind">EMNLP 2026 Main &middot; Oral</p>
       <h3><a href="https://aclanthology.org/2026.emnlp-main.800/">Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM Nowcasts on Macroeconomic Indicators</a>
-        <a class="site" href="https://livemacroeval.github.io/">Website</a></h3>
+        <a class="site" href="https://livemacroeval.github.io/">Website</a><a class="site" href="https://github.com/LiveMacroEval/LiveMacroEval">GitHub</a></h3>
       <p class="authors">Xinyue Zhao<sup>*</sup>, Ruiyi Zhang<sup>*</sup>, Liqin Ye, Rui Cao, Pengtao Xie, Sudheer Chava<sup>&dagger;</sup></p>
+      <details class="abstract">
+        <summary>Abstract</summary>
       <p class="summary">LiveMacroEval is a live, contamination-resistant benchmark testing whether web-enabled
         LLM agents can nowcast 16 major U.S. macroeconomic indicators before their official release. Across six
         months of hourly predictions, LLM agents perform broadly comparably to Federal Reserve nowcasts and the
         Bloomberg professional consensus.</p>
+      </details>
+      <p class="published">EMNLP 2026 Main Conference <em>Oral</em></p>
     </article>
   </section>
 
@@ -223,24 +231,30 @@
     <article class="paper">
       <h3>Retailer Bankruptcy and Its Spillover to Consumer Credit</h3>
       <p class="authors">Sudheer Chava, Rohan Ganduri, Yafei Zhang, Xinyue Zhao</p>
+      <details class="abstract">
+        <summary>Abstract</summary>
       <p class="summary">Retailer bankruptcies trigger widespread retail credit card closures and sharp cuts to
         consumer credit limits. Credit-constrained households cannot replace the lost credit and face
         persistent declines in borrowing capacity, revealing a retail credit card channel through which
         retailer bankruptcies impose lasting externalities on households.</p>
-      <p class="venues"><b>Presented/Scheduled</b><br>AFA 2027 &middot; NFA 2026 &middot;
-        Boulder Summer Conference 2026 &middot; GT&ndash;Atlanta Fed Household Finance Conference 2026</p>
+      </details>
+      <p class="venues"><b>Presented/Scheduled:</b> AFA 2027, NFA 2026, Boulder Summer Conference 2026,
+        GT&ndash;Atlanta Fed Household Finance Conference 2026, University of Miami</p>
       <p class="avail">Draft available on request.</p>
     </article>
 
     <article class="paper">
       <h3>The &ldquo;Myth&rdquo; of Covenant Violation Waiver</h3>
       <p class="authors">Sudheer Chava, Shunlan Fang, Xinyue Zhao</p>
+      <details class="abstract">
+        <summary>Abstract</summary>
       <p class="summary">Using a fine-tuned RoBERTa model on corporate filings, we find that waivers are granted
         in 67% of covenant violations, 22% of them involving material terms. Waived firms face larger increases
         in interest expenses, deeper investment cuts, and higher bankruptcy risk, consistent with creditor rent
         extraction rather than pure borrower relief.</p>
-      <p class="venues"><b>Presented/Scheduled</b><br>AI &amp; Future of Finance Conference 2026 &middot;
-        Georgia Tech 2025</p>
+      </details>
+      <p class="venues"><b>Presented/Scheduled:</b> AI &amp; Future of Finance Conference 2026,
+        Georgia Tech</p>
       <p class="avail">Draft available on request.</p>
     </article>
   </section>
